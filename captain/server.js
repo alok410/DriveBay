@@ -3,7 +3,6 @@ const app = require('./app');
 const server = http.createServer(app);
 
 
-server.listen(3001,()=>{
-    console.log("user is running on 3001");
-    
+server.listen(3002,()=>{
+    console.log("captain running on 3002")
 })

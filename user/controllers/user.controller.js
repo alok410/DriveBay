@@ -20,7 +20,7 @@ module.exports.register = async (req, res) => {
         await newUser.save();
 
         const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
-        delete user._doc.password
+        // delete user._doc.password
         res.cookie("token", token);
         res.send({ message: "User created successfully", success: true });
 
